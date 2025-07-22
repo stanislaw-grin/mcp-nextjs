@@ -27,7 +27,8 @@ const handler = createMcpHandler(server => {
   }
 }, {
   redisUrl: process.env.REDIS_URL,
-  basePath: '/api',
+  sseEndpoint: '/sse',
+  streamableHttpEndpoint: '/mcp',
   verboseLogs: true,
   maxDuration: 60
 })
